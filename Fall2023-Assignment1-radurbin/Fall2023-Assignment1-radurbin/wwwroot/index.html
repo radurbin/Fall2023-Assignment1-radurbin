@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<!-- INSTRUCTIONS:
+✓ Find a movie or TV series that you are a fan of and employ the following HTML/CSS features:
+✓ A background color for the entire page of your choosing.
+- A div containing:
+
+✓ An h1 element with an ID of 'Title'.
+✓ An img element related to the media with and ID of 'CoverArt' (Cover art is good here). This image should be circular/have rounded edges.
+✓ An h5 element with an ID of 'Rating'. This should be the rating from IMDB out of 10.
+- An iframe embedding a youtube video of a trailer of the media with an ID of 'Trailer'. This can be acquired by right clicking on the video, and copying the embed.
+
+- An <a> element linking to the IMDB page.
+- The summary text from IMDB in a Paragraph element with an ID of 'Summary'.
+- Unordered list of three to five actors. This unorder list element should have an ID of 'Actors'.
+
+- All content on the page should be centered.
+- Color all text on the page in a contrasting color to the one you picked for the background.
+- It is best to take this little pieces at a time, step by step, as not to get confused by too many things at once. W3 Schools is an amazing resource, and has examples on everything above if you get stuck.
+- Feel free to get creative and add additional features after base requirements have been met.
+- Publishing the app is a key requirement of the assignment. -->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AfterSun</title>
+    <style type="text/css">
+        .page-content-div {
+            width: 70%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-style: solid;
+            border-color: black;
+            border-width: 10px;
+        }
+
+        .flex-second-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            background-color: #2f441d;
+            color: white;
+            text-align: center;
+        }
+
+        #Title {
+        }
+
+        #CoverArt {
+            border-radius: 50%;
+            max-height: 400px;
+        }
+
+        #Rating {
+        }
+    </style>
+</head>
+<body>
+    <div class="page-content-div">
+        <h1 id="Title">Aftersun</h1>
+
+        <div class="flex-second-row">
+            <img id="CoverArt" src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/aftersun-2022-alternate-movie-poster-miranda-jackowski.jpg"
+                 alt="Emotionally Devastating Aftersun Poster" />
+
+            <h5 id="Rating">IMDB Rating: 7.7/10</h5>
+        </div>
+    </div>
+</body>
+</html>
