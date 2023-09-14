@@ -11,8 +11,12 @@
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
   <ItemGroup>
     <Content Remove="wwwroot\index.html" />
+    <Content Remove="wwwroot\css\fonts\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\css\fonts\" />
   </ItemGroup>
 </Project>

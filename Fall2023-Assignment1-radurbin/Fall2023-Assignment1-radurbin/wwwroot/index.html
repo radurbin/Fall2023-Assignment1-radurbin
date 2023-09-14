@@ -7,9 +7,9 @@
 ✓ An h1 element with an ID of 'Title'.
 ✓ An img element related to the media with and ID of 'CoverArt' (Cover art is good here). This image should be circular/have rounded edges.
 ✓ An h5 element with an ID of 'Rating'. This should be the rating from IMDB out of 10.
-- An iframe embedding a youtube video of a trailer of the media with an ID of 'Trailer'. This can be acquired by right clicking on the video, and copying the embed.
+✓ An iframe embedding a youtube video of a trailer of the media with an ID of 'Trailer'. This can be acquired by right clicking on the video, and copying the embed.
 
-- An <a> element linking to the IMDB page.
+✓ An <a> element linking to the IMDB page.
 - The summary text from IMDB in a Paragraph element with an ID of 'Summary'.
 - Unordered list of three to five actors. This unorder list element should have an ID of 'Actors'.
 
@@ -24,7 +24,7 @@
     <title>AfterSun</title>
     <style type="text/css">
         .page-content-div {
-            width: 70%;
+            width: 80%;
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -35,17 +35,21 @@
             border-width: 10px;
         }
 
-        .flex-second-row {
+        .flex-second-row, .flex-third-row {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            gap: 30px;
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
         body {
             background-color: #2f441d;
             color: white;
             text-align: center;
+            font-family: 'Avenir Next';
         }
 
         #Title {
@@ -58,17 +62,36 @@
 
         #Rating {
         }
+
+        #Trailer {
+        }
     </style>
 </head>
 <body>
     <div class="page-content-div">
-        <h1 id="Title">Aftersun</h1>
+        <h1 id="Title">aftersun</h1>
 
         <div class="flex-second-row">
             <img id="CoverArt" src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/aftersun-2022-alternate-movie-poster-miranda-jackowski.jpg"
                  alt="Emotionally Devastating Aftersun Poster" />
 
             <h5 id="Rating">IMDB Rating: 7.7/10</h5>
+
+            <iframe id="Trailer" width="560" height="315" src="https://www.youtube.com/embed/G9jOaggGPKQ?si=9d8LkoZ73nNyq-Mr&amp;"
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+        </div>
+
+        <div class="flex-third-row">
+            <p>
+                <a href="https://www.imdb.com/title/tt19770238/" target="_blank">
+                    <img src="https://www.seekpng.com/png/full/193-1934529_all-white-imdb-logo-png.png"
+                         style="max-height:150px; width:auto;" />
+                </a>
+            </p>
+            <!-- FIXME: make SUMMARY smaller using flexbox shit, add other elements, and fix the resizing issues above -->
+            <p id="Summary">Sophie reflects on the shared joy and private melancholy of a holiday she took with her father twenty years earlier.
+            Memories real and imagined fill the gaps between as she tries to reconcile the father she knew with the man she didn't...</p>
         </div>
     </div>
 </body>
