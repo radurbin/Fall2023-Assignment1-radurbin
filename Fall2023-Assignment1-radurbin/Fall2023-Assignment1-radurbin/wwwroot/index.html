@@ -10,11 +10,11 @@
 ✓ An iframe embedding a youtube video of a trailer of the media with an ID of 'Trailer'. This can be acquired by right clicking on the video, and copying the embed.
 
 ✓ An <a> element linking to the IMDB page.
-- The summary text from IMDB in a Paragraph element with an ID of 'Summary'.
-- Unordered list of three to five actors. This unorder list element should have an ID of 'Actors'.
+✓ The summary text from IMDB in a Paragraph element with an ID of 'Summary'.
+✓ Unordered list of three to five actors. This unorder list element should have an ID of 'Actors'.
 
-- All content on the page should be centered.
-- Color all text on the page in a contrasting color to the one you picked for the background.
+✓ All content on the page should be centered.
+✓ Color all text on the page in a contrasting color to the one you picked for the background.
 - It is best to take this little pieces at a time, step by step, as not to get confused by too many things at once. W3 Schools is an amazing resource, and has examples on everything above if you get stuck.
 - Feel free to get creative and add additional features after base requirements have been met.
 - Publishing the app is a key requirement of the assignment. -->
@@ -29,10 +29,11 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: stretch;
             border-style: solid;
             border-color: black;
             border-width: 10px;
+            gap: 20px;
         }
 
         .flex-second-row, .flex-third-row {
@@ -53,6 +54,7 @@
         }
 
         #Title {
+            font-size: 50px;
         }
 
         #CoverArt {
@@ -65,6 +67,18 @@
 
         #Trailer {
         }
+
+        #IMDB-link {
+            flex-basis: 500px;
+        }
+
+        #Summary {
+            flex-basis: 350px;
+        }
+
+        #Actors {
+            flex-basis: 200px;
+        }
     </style>
 </head>
 <body>
@@ -72,8 +86,9 @@
         <h1 id="Title">aftersun</h1>
 
         <div class="flex-second-row">
-            <img id="CoverArt" src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/aftersun-2022-alternate-movie-poster-miranda-jackowski.jpg"
+            <img id="CoverArt" src="https://ih1.redbubble.net/image.4885105382.6054/flat,750x,075,f-pad,750x1000,f8f8f8.jpg"
                  alt="Emotionally Devastating Aftersun Poster" />
+            <!--ON HOVER: CHANGE POSTER-->
 
             <h5 id="Rating">IMDB Rating: 7.7/10</h5>
 
@@ -83,16 +98,33 @@
         </div>
 
         <div class="flex-third-row">
-            <p>
-                <a href="https://www.imdb.com/title/tt19770238/" target="_blank">
-                    <img src="https://www.seekpng.com/png/full/193-1934529_all-white-imdb-logo-png.png"
-                         style="max-height:150px; width:auto;" />
-                </a>
+            <a id="IMDB-link" href="https://www.imdb.com/title/tt19770238/" target="_blank">
+                <img src="https://www.seekpng.com/png/full/193-1934529_all-white-imdb-logo-png.png"
+                     style="max-height:140px; width:auto;" />
+            </a>
+            <!-- FIXME: fix resizing issues -->
+            <p id="Summary">
+                Sophie reflects on the shared joy and private melancholy of a holiday she took with her father twenty years earlier.
+                Memories real and imagined fill the gaps between as she tries to reconcile the father she knew with the man she didn't...
             </p>
-            <!-- FIXME: make SUMMARY smaller using flexbox shit, add other elements, and fix the resizing issues above -->
-            <p id="Summary">Sophie reflects on the shared joy and private melancholy of a holiday she took with her father twenty years earlier.
-            Memories real and imagined fill the gaps between as she tries to reconcile the father she knew with the man she didn't...</p>
+            <ul id="Actors">
+                <li>
+                    Paul Mescal
+                </li>
+                <li>
+                    Frankie Corio
+                </li>
+                <li>
+                    Celia Rowlson-Hall
+                </li>
+            </ul>
         </div>
     </div>
+    <script type="text/javascript">
+        // changes the poster when you hover over the cover art
+        // FIXME
+        document.getElementbyId("CoverArt").onmouseover = function () { document.getElementbyId("CoverArt").src = "https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/aftersun-2022-alternate-movie-poster-miranda-jackowski.jpg" };
+        document.getElementbyId("CoverArt").onmouseout = function () { document.getElementbyId("CoverArt").src = "https://ih1.redbubble.net/image.4885105382.6054/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" };
+    </script>
 </body>
 </html>
