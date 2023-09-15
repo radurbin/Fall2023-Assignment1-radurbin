@@ -28,6 +28,13 @@ body {
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('fonts/AvenirNextLTPro-Bold.otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
 .page-content-div {
     width: 80%;
     margin: auto;
@@ -61,6 +68,7 @@ body {
 #Title {
     font-size: 50px;
     letter-spacing: 12px;
+    font-weight: bold;
 }
 
 #CoverArt {
