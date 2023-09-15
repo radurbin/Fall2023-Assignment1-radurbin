@@ -23,7 +23,7 @@ body {
 
 @font-face {
     font-family: 'Avenir Next';
-    src: url('path/to/fonts/AvenirNextLTPro-Regular.otf');
+    src: url('fonts/AvenirNextLTPro-Regular.otf');
     font-weight: normal;
     font-style: normal;
 }
